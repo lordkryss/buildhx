@@ -680,6 +680,11 @@ class BuildHX {
 			
 		}
 		
+		if (element.has.comment)
+		{
+			method.comment = element.att.comment;
+		}
+		
 		if (element.name == "static-method" || (element.has.resolve ("static") && element.att.resolve ("static") == "true")) {
 			
 			definition.staticMethods.set (method.name, method);
